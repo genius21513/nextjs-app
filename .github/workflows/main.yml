@@ -20,6 +20,6 @@ jobs:
     needs: build-and-test
     steps:
       - uses: actions/checkout@v2
-      - run: sudo docker stop metakrew || true
-      - run: sudo docker build . -t metakrew
-      - run: sudo docker run -d --rm --name=metakrew metakrew
+      - run: sudo docker stop nextapp || true
+      - run: sudo docker build . -t nextapp
+      - run: sudo docker run -d --rm --name=nextapp nextapp
