@@ -20,6 +20,6 @@ jobs:
     needs: build-and-test
     steps:
       - uses: actions/checkout@v2
-      - run: sudo docker stop nextapp || true
+      - run: sudo docker stop nextapp || true      
       - run: sudo docker build . -t nextapp
-      - run: sudo docker run -d --rm --name=nextapp nextapp
+      - run: sudo docker run -d --rm -p 4000:3000 --name=nextapp nextapp
